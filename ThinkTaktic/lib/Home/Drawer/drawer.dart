@@ -12,7 +12,9 @@ class MyDrawerScreen extends StatefulWidget {
 class _MyDrawerScreenState extends State<MyDrawerScreen> {
   @override
   Widget build(BuildContext context) {
-    
+    // GET CURRENT USER DETAILS FROM FIREBASE AUTHENTICATION SERVICE 
+    final User? user = FirebaseAuth.instance.currentUser;
+
     return Drawer(
       child: Container(
         color: Colors.white,
@@ -21,15 +23,21 @@ class _MyDrawerScreenState extends State<MyDrawerScreen> {
             AppBar(
               backgroundColor: Colors.white,
               automaticallyImplyLeading: false,
-              title: const Center(
-                child: Text(
-                  ' ',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold,
+              title: Column(
+                children: [
+                  // USER PROFILE DETAILS
+                  Center( 
+                    child: Text(
+                      // DISPLAY USER NAME 
+                      'Hello, ${user!.displayName}',
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
             Column(

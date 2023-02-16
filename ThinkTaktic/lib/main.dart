@@ -1,3 +1,14 @@
+/*
+[TODO] 1. Email Validator (https://emailregex.com/) 
+      2. NIST Password Validator (https://pages.nist.gov/800-63-3/sp800-63b.html#sec5)
+      3. Firebase Authentication (Email & Password) 
+      4. Firebase Cloud Firestore (CRUD)
+      5. Firebase Storage (Upload & Download)
+      6. game API integration (https://api.rawg.io/docs/)
+*/ 
+
+
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:notes/Components/AuthenticationPage/authentication_page.dart';

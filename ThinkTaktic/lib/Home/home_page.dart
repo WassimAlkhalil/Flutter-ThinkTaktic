@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           'ThinkTaktic',
           style: TextStyle(
             color: Colors.black,
-            fontSize: 24.0,
+            fontSize: 25.0,
             fontWeight: FontWeight.bold,
           ),
         ),
