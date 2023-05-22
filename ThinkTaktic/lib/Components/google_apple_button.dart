@@ -36,8 +36,8 @@ class MySignInButton extends StatelessWidget {
         child: Center(
           child: Image.asset(
             assetName,
-            width: width / 2,
-            height: height / 2,
+            width: 30,
+            height: 30,
           ),
         ),
       ),

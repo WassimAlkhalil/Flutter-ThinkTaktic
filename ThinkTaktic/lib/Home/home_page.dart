@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:notes/Home/Levels/first_level.dart';
-import 'package:notes/Home/Drawer/drawer.dart';
+import 'package:notes/Drawer/drawer.dart';
+import 'package:notes/Levels/first_level.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

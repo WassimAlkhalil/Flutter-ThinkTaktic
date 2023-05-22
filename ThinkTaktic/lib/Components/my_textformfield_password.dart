@@ -17,13 +17,17 @@ class _MyTextFormFieldPasswordState extends State<MyTextFormFieldPassword> {
 
   @override
   Widget build(BuildContext context) {
+    var deviceWidth = MediaQuery.of(context).size.width;
+    var fontSize = deviceWidth * 0.05;
+
     return TextFormField(
       obscureText: _obscureText,
       decoration: InputDecoration(
         hintText: 'Password',
-        hintStyle: const TextStyle(
+        hintStyle: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,
+          fontSize: fontSize,
         ),
         prefixIcon: const Icon(
           Icons.lock,
@@ -31,8 +35,8 @@ class _MyTextFormFieldPasswordState extends State<MyTextFormFieldPassword> {
         ),
         suffixIcon: IconButton(
           icon: Icon(
+            _obscureText ? Icons.visibility : Icons.visibility_off,
             color: Colors.black,
-            _obscureText ? Icons.visibility_off : Icons.visibility,
           ),
           onPressed: () {
             setState(
@@ -53,9 +57,10 @@ class _MyTextFormFieldPasswordState extends State<MyTextFormFieldPassword> {
           ),
         ),
       ),
-      style: const TextStyle(
+      style: TextStyle(
         color: Colors.black,
         fontWeight: FontWeight.bold,
+        fontSize: fontSize,
       ),
     );
   }

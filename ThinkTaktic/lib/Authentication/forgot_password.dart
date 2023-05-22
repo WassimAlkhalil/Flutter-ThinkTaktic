@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:notes/Components/Authentication/signin.dart';
+import 'package:notes/Authentication/signin.dart';
 import 'package:notes/Components/my_alert_dialog.dart';
 import 'package:notes/Components/my_animated_text_kit.dart';
 import 'package:notes/Components/my_textformfield_email.dart';
@@ -26,6 +26,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
+      // disable back button
       onWillPop: () async {
         return false;
       },
@@ -34,7 +35,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            const SizedBox(height: 80.0),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [

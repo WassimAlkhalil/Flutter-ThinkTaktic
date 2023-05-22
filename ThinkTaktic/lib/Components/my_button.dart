@@ -6,33 +6,40 @@ class MyButton extends StatelessWidget {
   final Color color;
 
   const MyButton(
-      {super.key, required this.text, required this.onTap, this.color = Colors.blue});
+      {super.key,
+      required this.text,
+      required this.onTap,
+      this.color = Colors.blue});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 390,
-      height: 70,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
-          child: Center(
-            child: Text(
-              text,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Container(
+          width: constraints.maxWidth * 0.8,
+          height: 60.0,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(5.0),
+          ),
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: onTap,
+              child: Center(
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                  ),
+                ),
               ),
             ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

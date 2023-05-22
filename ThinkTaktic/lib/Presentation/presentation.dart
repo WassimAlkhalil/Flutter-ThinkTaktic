@@ -5,14 +5,14 @@ import 'package:notes/Presentation/intro_second_page.dart';
 import 'package:notes/Presentation/intro_third_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class Prsentation extends StatefulWidget {
-  const Prsentation({super.key});
+class PrsentationPage extends StatefulWidget { // 
+  const PrsentationPage({super.key});
 
   @override
-  State<Prsentation> createState() => _PrsentationState();
+  State<PrsentationPage> createState() => _PrsentationPageState();
 }
 
-class _PrsentationState extends State<Prsentation> {
+class _PrsentationPageState extends State<PrsentationPage> {
   final _controller = PageController();
   bool _isLastPage = false;
 

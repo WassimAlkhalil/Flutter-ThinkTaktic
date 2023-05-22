@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes/Components/my_sign_in_button.dart.dart';
+import 'package:notes/components/google_apple_button.dart';
 import 'package:notes/services/apple_service.dart';
 import 'package:notes/services/google_service.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
@@ -11,9 +11,10 @@ class MySlidingUpPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SlidingUpPanel(
-        minHeight: 75,
-        maxHeight: 200,
+        minHeight: MediaQuery.of(context).size.height * 0.08,
+        maxHeight: MediaQuery.of(context).size.height * 0.22,
         renderPanelSheet: false,
         panel: _floatingPanel(),
         collapsed: _floatingCollapsed(),
